@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.todo-header {
+  font-size: 80px;
+  font-weight: 100;
+  color: #b83f45;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.list {
+  width: 1000px;
+  max-width: 550px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  border: none ;
+}
+.new-item-form {
+  width: 100%;
+}
+.new-item-form:focus{
+  border: 2px solid rgb(210, 11, 11);
+}/*注意 */
+.form-row {
+  position: relative;
+}
+.input1 {
+  width: 100%;
+  padding: 16px 16px 16px 60px;
+  font-size: 24px;
+  border: none;
+  background-color: white;
+  box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
+}
+.input1::placeholder {
+  color: #989898;
+  font-style: italic;
+}
+.input1:focus {
+  outline: none;
+  border: 2px solid #db030e;
+}
+
+.form-row::before {
+  content: "▼";
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #d9d9d9;
+  font-size: 16px;
+  pointer-events: none;
+}
+.todo-list {
+  list-style: none;
+}
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 24px;
+  background-color: white;
+}
+
+/* 任务标签样式 */
+.todo-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  flex-grow: 1;
+}
+
+/* 自定义圆形复选框 */
+ .todo-label input[type="checkbox"] {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+  margin-right: 15px;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  position: relative;
+}
+
+/* 复选框选中状态 */
+.todo-label input[type="checkbox"]:checked {
+  border-color: #7bc96f;
+  background-color: white;
+}
+
+/* 复选框选中后的对勾 */
+.todo-label input[type="checkbox"]:checked::after {
+  content: '✓';
+  position: absolute;
+  color: #7bc96f;
+  font-size: 18px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.todo-title {
+  transition: color 0.2s;
+}
+.completed {
+  color: #b3b3b3;
+  text-decoration: line-through;
+}
+.delete-btn {
+  background: none;
+  border: none;
+  color: #cc9a9a;
+  font-size: 32px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+  padding: 0 10px;
+}
+.todo-item:hover .delete-btn {
+  opacity: 1;
+}
+.todo-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #000000;
+  border-top: 1px solid #e6e6e6;
+  background-color: white;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
+}
+.items-left {
+  flex: 1;
+}
+.filter-buttons {
+  display: flex;
+  gap: 5px;
+  margin: 0 10px;
+}
+.filter-btn {
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: 3px 7px;
+  color: inherit;
+  cursor: pointer;
+  transition: border-color 0.1s;
+}
+.filter-btn.active {
+  border-color: #e07c7c;
+}
+.filter-btn:hover {
+  border-color: #e07c7c;
+}
+.clear-completed-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 3px 7px;
+  transition: text-decoration 0.2s;
+}
+.clear-completed-btn:hover {
+  text-decoration: underline;
+}
+

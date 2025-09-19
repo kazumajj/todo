@@ -1,0 +1,23 @@
+{
+  "id": "5025397",
+  "name": "todo",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1450455",
+      "name": "下拉箭头",
+      "font_class": "xialajiantou",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "9478873",
+      "name": "下拉箭头-下",
+      "font_class": "xialajiantou-xia",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    }
+  ]
+}
